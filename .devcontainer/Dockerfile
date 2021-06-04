@@ -19,7 +19,10 @@ RUN if [ "${INSTALL_NODE}" = "true" ]; \
         then su vscode -c "umask 0002 && . /usr/local/share/nvm/nvm.sh && nvm install ${NODE_VERSION} 2>&1"; \
     fi
 
-RUN apt update && apt install default-jdk -y
+# Install jdk
+RUN apt-get update && apt-get install -y \
+    default-jdk \
+    && rm -rf /var/lib/apt/lists/*
 
 # [Optional] If your pip requirements rarely change, uncomment this section to add them to the image.
 COPY requirements.txt /tmp/pip-tmp/requirements.txt

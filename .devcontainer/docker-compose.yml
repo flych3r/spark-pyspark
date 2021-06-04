@@ -31,7 +31,7 @@ services:
     # (Adding the "ports" property to this file will not forward from a Codespace.)
 
   spark:
-    image: docker.io/bitnami/spark:3
+    image: docker.io/bitnami/spark:3.1.2
     environment:
       - SPARK_MODE=master
       - SPARK_RPC_AUTHENTICATION_ENABLED=no
@@ -39,7 +39,7 @@ services:
       - SPARK_LOCAL_STORAGE_ENCRYPTION_ENABLED=no
       - SPARK_SSL_ENABLED=no
   spark-worker-1:
-    image: docker.io/bitnami/spark:3
+    image: docker.io/bitnami/spark:3.1.2
     environment:
       - SPARK_MODE=worker
       - SPARK_MASTER_URL=spark://spark:7077
@@ -50,7 +50,7 @@ services:
       - SPARK_LOCAL_STORAGE_ENCRYPTION_ENABLED=no
       - SPARK_SSL_ENABLED=no
   spark-worker-2:
-    image: docker.io/bitnami/spark:3
+    image: docker.io/bitnami/spark:3.1.2
     environment:
       - SPARK_MODE=worker
       - SPARK_MASTER_URL=spark://spark:7077
