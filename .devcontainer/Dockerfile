@@ -22,6 +22,7 @@ RUN if [ "${INSTALL_NODE}" = "true" ]; \
 # Install jdk
 RUN apt-get update && apt-get install -y \
     default-jdk \
+    netcat \
     && rm -rf /var/lib/apt/lists/*
 
 # [Optional] If your pip requirements rarely change, uncomment this section to add them to the image.

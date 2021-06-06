@@ -1,6 +1,8 @@
 {
     "cSpell.words": [
-        "pyspark"
+        "getenv",
+        "pyspark",
+        "tweepy"
     ],
     "python.pythonPath": "/usr/local/bin/python"
 }
